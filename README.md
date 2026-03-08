@@ -16,15 +16,11 @@ from simple nonlinear interactions.
 
 The activity variable \(x(t)\) evolves according to:
 
-\[
-\frac{dx}{dt}
-=
-\alpha x \frac{x^n}{K^n + x^n}\left(1-\frac{x}{K_c}\right)
--
-\delta x
-+
-I
-\]
+```math
+\frac{dx}{dt} =
+\alpha \frac{x^n}{K^n + x^n}\left(1-\frac{x}{K_c}\right)
+- \delta x + I
+```
 
 Where:
 
