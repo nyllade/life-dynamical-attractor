@@ -24,13 +24,13 @@ The activity variable \(x(t)\) evolves according to:
 
 Where:
 
-- \(x\) — activity level
-- \(\alpha\) — feedback strength
-- \(n\) — Hill coefficient (nonlinearity)
-- \(K\) — feedback saturation constant
-- \(K_c\) — carrying capacity
-- \(\delta\) — degradation rate
-- \(I\) — environmental input
+- $x$ — activity level  
+- $\alpha$ — feedback strength  
+- $n$ — Hill coefficient (nonlinearity)  
+- $K$ — feedback saturation constant  
+- $K_c$ — carrying capacity  
+- $\delta$ — degradation rate  
+- $I$ — environmental input
 
 The model combines three competing processes:
 
