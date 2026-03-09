@@ -1,97 +1,127 @@
 # Life as a Dynamical Attractor
 
-This project explores how simple nonlinear feedback systems can produce
-persistent activity states that resemble life-like dynamical attractors.
+This project explores a minimal dynamical model for the emergence of sustained activity in a prebiotic chemical network.  
+The goal is to study how nonlinear feedback and environmental forcing can produce **stable dynamical attractors**, bistability, and symmetry breaking.
 
-Using a minimal mathematical model, we study how positive feedback,
-environmental support, and degradation interact to determine whether
-activity collapses or persists.
-
-The notebook demonstrates how persistent dynamical behavior can emerge
-from simple nonlinear interactions.
+The central question is whether chemical activity collapses to zero or persists as a self-sustaining dynamical state.
 
 ---
 
 # Model
 
-The activity variable \(x(t)\) evolves according to:
+The system is modeled by the nonlinear differential equation
 
-```math
-\frac{dx}{dt} =
-\alpha \frac{x^n}{K^n + x^n}\left(1-\frac{x}{K_c}\right)
-- \delta x + I
-```
+$$
+\frac{dx}{dt}
+=
+\alpha \frac{x^n}{K^n + x^n}
+\left(1 - \frac{x}{K_c}\right)
+-
+\delta x
++
+I
+$$
 
-Where:
+where
 
-- $x$ — activity level  
+- $x$ — activity level of the chemical network  
 - $\alpha$ — feedback strength  
-- $n$ — Hill coefficient (nonlinearity)  
-- $K$ — feedback saturation constant  
-- $K_c$ — carrying capacity  
+- $n$ — Hill coefficient controlling nonlinearity  
+- $K$ — saturation constant  
+- $K_c$ — carrying capacity representing resource limitation  
 - $\delta$ — degradation rate  
-- $I$ — environmental input
+- $I$ — environmental input  
 
-The model combines three competing processes:
+The equation combines four competing mechanisms:
 
-1. nonlinear autocatalytic feedback
-2. degradation / loss
-3. environmental support
+1. nonlinear autocatalytic amplification  
+2. feedback saturation through a Hill function  
+3. logistic limitation due to finite resources  
+4. degradation and external environmental forcing  
 
-This minimal framework is used to study when sustained activity can
-emerge as a dynamical attractor.
+These interactions determine whether activity collapses or persists as a stable attractor.
+
+---
+
+# What This Notebook Investigates
+
+The notebook analyzes the system using several tools from nonlinear dynamical systems:
+
+- time evolution of activity
+- persistence versus collapse
+- bifurcation structure
+- basin of attraction and robustness
+- recovery from perturbations
+- extension to chiral symmetry breaking
+
+The goal is to understand **when life-like persistent dynamics can emerge from simple chemical feedback systems.**
 
 ---
 
 # Notebook Structure
 
-The main notebook `attractor_model.ipynb` contains the following analyses:
+## Life as a Dynamical Attractor
 
-### 1. Time-Series Dynamics
-Simulates activity trajectories over time to show how the system evolves
-from small initial conditions.
+- Model Equation  
+- Baseline Parameters  
+- Time Series Simulation  
+- Persistence Classification  
+- Effect of Feedback Strength  
+- Steady-State Activity as a Function of Feedback Strength  
+- Persistence Regime Maps (environmental viability)  
+- Three-State Regime Map (Collapse / Bistable / Persistent)  
+- Bistability and Attractor Structure  
+- Phase-Line Diagram  
+- Bifurcation Diagram  
 
-### 2. Persistence Classification
-Determines whether the system converges to collapse or persistent activity.
-
-### 3. Effect of Feedback Strength
-Shows how increasing positive feedback changes activation dynamics.
-
-### 4. Steady-State Activity vs Feedback Strength
-Analyzes how equilibrium activity depends on feedback strength.
-
-### 5. Persistence Regime Maps
-Explores environmental parameter space to determine where activity
-can persist.
-
-### 6. Three-State Regime Map
-Identifies regions of:
-- collapse
-- bistability
-- persistent activity
-
-### 7. Phase-Line Analysis
-Examines fixed points and stability structure of the system.
-
-### 8. Bifurcation Diagram
-Shows how steady states change as degradation rate varies.
-
-### 9. Basin of Attraction
-Analyzes how initial conditions determine which attractor the system
-converges to.
-
-### 10. Perturbation Recovery
-Tests resilience of persistent activity under perturbations.
-
-### 11. Chirality Extension
-Extends the model to two interacting species (L and R) to explore
-symmetry breaking and the emergence of enantiomeric excess.
+These sections analyze how nonlinear feedback creates stable or unstable dynamical regimes.
 
 ---
 
-# Installation
+## Basin of Attraction
 
-Install dependencies before running the notebook:
+- Locating a Bistable Environment  
+- Interpretation of Candidate Bistable Points  
+- Basin of Attraction at a Bistable Point  
+- Basin Robustness Landscape  
+- Recovery from Perturbations  
 
-```bash
+These analyses examine the robustness of the persistent state and how the system responds to perturbations.
+
+---
+
+## Chirality Effects
+
+- Chirality and Persistence  
+- Chirality Symmetry Breaking  
+- Chiral Dynamics  
+- Phase Portrait of the Chiral System  
+- Quantifying Chirality: Enantiomeric Excess  
+- Final Enantiomeric Excess Across Parameters  
+
+The model is extended to two competing species $L$ and $R$ representing left- and right-handed molecular forms.  
+This allows investigation of **spontaneous symmetry breaking and the emergence of homochirality**.
+
+---
+
+## Possible Extension
+
+- Resource-Coupled Persistence  
+
+This section outlines a possible extension where chemical activity is coupled to explicit resource dynamics.
+
+---
+
+# How to Run
+
+Install dependencies:
 pip install -r requirements.txt
+
+Then run the notebook:
+All figures and analyses will be generated automatically when the notebook cells are executed.
+
+---
+
+# License
+
+This project is released under the MIT License.
