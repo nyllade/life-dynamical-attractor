@@ -12,14 +12,7 @@ The central question is whether chemical activity collapses to zero or persists 
 The system is modeled by the nonlinear differential equation
 
 $$
-\frac{dx}{dt}
-=
-\alpha \frac{x^n}{K^n + x^n}
-\left(1 - \frac{x}{K_c}\right)
--
-\delta x
-+
-I
+\frac{dx}{dt} = \alpha \frac{x^n}{K^n + x^n}\left(1 - \frac{x}{K_c}\right) - \delta x + I
 $$
 
 where
