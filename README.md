@@ -85,9 +85,8 @@ These analyses examine the robustness of the persistent state and how the system
 
 ## Chirality Effects
 
-- Chirality and Persistence  
+- Chiral Dynamics
 - Chirality Symmetry Breaking  
-- Chiral Dynamics  
 - Phase Portrait of the Chiral System  
 - Quantifying Chirality: Enantiomeric Excess  
 - Final Enantiomeric Excess Across Parameters  
