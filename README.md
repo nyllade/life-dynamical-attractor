@@ -86,9 +86,9 @@ These analyses examine the robustness of the persistent state and how the system
 ## Chirality Effects
 
 - Chiral Dynamics
-- Chirality Symmetry Breaking  
-- Phase Portrait of the Chiral System  
-- Quantifying Chirality: Enantiomeric Excess  
+- Chirality Symmetry Breaking   
+- Quantifying Chirality: Enantiomeric Excess 
+- Phase Portrait of the Chiral System 
 - Final Enantiomeric Excess Across Parameters  
 
 The model is extended to two competing species $L$ and $R$ representing left- and right-handed molecular forms.  
